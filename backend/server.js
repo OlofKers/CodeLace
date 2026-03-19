@@ -1,7 +1,9 @@
-require('dotenv').config()
-const express = require('express')
-const mongoose = require('mongoose')
-const cors = require('cors')
+// attach .env and libraries/frameworks
+require("dotenv").config()
+const express = require("express")
+const mongoose = require("mongoose")
+const cors = require("cors")
+const authRoutes = require("./routes/auth")
 
 const app = express()
 
@@ -9,14 +11,20 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+//routes
+app.use('/api/auth', authRoutes);
+
 // Test route
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
     res.send("CodeLace API is running!")
 })
 
 // Connect to Database
-mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log('MongoDB connected'))
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log("MongoDB connected"))
 .catch(err => console.error(err))
 
 // Start server

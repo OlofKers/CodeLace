@@ -12,7 +12,7 @@ javascript
 
 frameworks
 node.js for backend
-maybe a front end framework?
+React for frontend
 css Tailwind
 database mongoDB with Mongoose
 
