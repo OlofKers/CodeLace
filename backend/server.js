@@ -4,6 +4,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const authRoutes = require("./routes/auth")
+const postRoutes = require("./routes/posts")
 
 const app = express()
 
@@ -13,6 +14,7 @@ app.use(express.json())
 
 //routes
 app.use('/api/auth', authRoutes);
+app.use("/posts", postRoutes)
 
 // Test route
 app.get("/", (req, res) => {
