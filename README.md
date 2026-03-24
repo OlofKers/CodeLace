@@ -1,24 +1,25 @@
-# CodeLace
+# CodeLace 
 
-a backend project
+**CodeLace** is a platform for developers to share, discover, and discuss code snippets in a social, interactive way.  
+Think of it as a blend between a code-sharing tool and a lightweight social feed — where code is the main content.
 
-a forum where people can share scripts or code blocks which can then be commented on, liked disliked, saved, reposted. a bit like stackoverflow and twitter combined?
+Users can post snippets, interact through comments, and engage with other developers' ideas in a clean and structured environment.
 
-name
-*pending*
+---
 
-language
-javascript
+## ⚙️ Tech Stack
 
-frameworks
-node.js for backend
-React for frontend
-css Tailwind
-database mongoDB with Mongoose
+| Layer      | Technology          |
+|------------|---------------------|
+| Backend    | Node.js + Express   |
+| Database   | MongoDB             |
+| ORM        | Mongoose            |
+| Frontend   | React, Tailwind CSS |
+| Auth       | JWT                 |
 
-core functions
-uploading text posts with the ability to add code blocks
-liking/disliking these "posts"
-placing comments on other peoples posts (comments can also have code blocks)
-a secure login system
-a user profile where they can see liked posts, placed comments and uploaded posts, add a profile picture, display name, link their github.
+
+---
+
+## 🚧 Status
+
+This project is currently in early development.
