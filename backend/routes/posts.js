@@ -1,11 +1,13 @@
 const express = require("express")
 const router = express.Router()
 const Post = require("../models/post")
+const authMiddleware = require('../middleware/auth');
 
-router.post("/", async (req, res) => {
+
+router.post("/", authMiddleware, async (req, res) => {
     try{
-        const {title, content, author} = req.body
-        const post = new Post({title, content, author})
+        const {title, content} = req.body
+        const post = new Post({title, content, author: req.user.id})
         await post.save()
         res.status(201).json(post)
     } catch(err){

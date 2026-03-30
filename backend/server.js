@@ -6,6 +6,7 @@ const cors = require("cors")
 const authRoutes = require("./routes/auth")
 const postRoutes = require("./routes/posts")
 
+
 const app = express()
 
 // Middleware
